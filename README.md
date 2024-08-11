@@ -1,6 +1,6 @@
-# ioc_app
+# Dark And Light Theme App
 
-A new Flutter project.
+A simple flutter project with light and dark theme functionality
 
 ## Getting Started
 
