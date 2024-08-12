@@ -4,6 +4,7 @@ import 'package:ioc_app/locator.dart';
 import 'package:ioc_app/pages/home_page.dart';
 import 'package:ioc_app/providers/theme_provider.dart';
 import 'package:ioc_app/services/shared_preferences_service.dart';
+import 'package:ioc_app/widgets/internet_connection_status.dart';
 
 class MyApp extends ConsumerWidget {
   const MyApp({super.key});
@@ -26,7 +27,7 @@ class MyApp extends ConsumerWidget {
       themeMode: prefs.isFirstLaunch ? ThemeMode.system : appTheme,
       themeAnimationDuration: Duration.zero,
       // Theme animationDuration is set to zero [Issue Link](https://github.com/flutter/flutter/issues/105883)
-      home: HomePage(),
+      home: InternetConnectionStatus(child: HomePage()),
     );
   }
 }
